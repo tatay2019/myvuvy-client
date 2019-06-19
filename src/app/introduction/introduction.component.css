@@ -1,0 +1,41 @@
+.welcome{
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.welcome hr {
+  border-top: 3px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: .7rem;
+}
+.display-4{
+  font-size: 350%;
+}
+.lead{
+  text-align: justify;
+}
+.fa-cogs, .fa-graduation-cap
+{
+  font-size: 6rem;
+  margin: 1rem;
+  color: black;
+}
+.fa-book, .fa-handshake{
+  font-size: 6rem;
+  margin: 1rem;
+  color: rgb(2,179,228);
+}
+.fa-book:hover,.fa-handshake:hover{
+  color: black;
+  cursor: pointer;
+}
+.fa-cogs:hover, .fa-graduation-cap:hover
+{
+  color: rgb(2,179,228);
+  cursor: pointer;
+}
+.BlueTitle
+{
+  color: rgb(2,179,228);
+}
