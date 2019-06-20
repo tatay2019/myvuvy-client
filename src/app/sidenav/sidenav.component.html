@@ -9,19 +9,33 @@
       </li>
       <li> <a  href="#" ><i class="fa fa-graduation-cap size"></i><span>My Courses</span></a>
       </li>
-      <li> <a href="#" ><i class="fa fa-bandcamp size"></i><span>Catalog</span></a>
+      <li> <a href="#" ><i class="fa fa-safari size"></i><span>Catalog</span></a>
       </li>
-      <li> <a href="#"><i class="fa fa-envelope-o size"></i><span>Inbox</span></a>
+      <li> <a href="#"><i class="fa fa-facebook-messenger size"></i><span>Inbox</span></a>
       </li>
-      <li id="bottomSide"> <a href="#"><i class="fa fa-gears size"></i><span>Settings</span></a>
+      <div id="bottomSide">
+      <li> <a href="#"><i class="fa fa-cog size"></i><span>Settings</span></a>
       </li>
       <li> <a href="#"><i class="fa fa-power-off size"></i><span>Logout</span></a>
       </li>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="userBlocName">
+        <img src="/assets/images/java.jpg" alt="Avatar" class="avatar">
+        <span id="userNameAccount">  Java Account</span>
+      </div>
     </mat-toolbar>
-
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

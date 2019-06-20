@@ -18,7 +18,7 @@
 }
 mat-toolbar
 {
-  height: 65px;
+  background: #0a3d62!important;
 }
 mat-toolbar #firstPart, #secondPart{
   padding-top: 8px;
@@ -78,6 +78,22 @@ mat-nav-list > li.active > a {
   padding-top: 12px;
 }
 #bottomSide{
-  padding-top:18rem;
+  position: absolute;
+  bottom: 0;
 }
-
+.userBlocName
+{
+  position: absolute;
+  right: 0px;
+  font-size: 16px;
+}
+.avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+#userNameAccount
+{
+  padding: 0px 20px 0 5px;
+}
