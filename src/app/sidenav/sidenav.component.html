@@ -1,0 +1,27 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar><span id="firstPart">MyV</span><span id="secondPart">uVy</span></mat-toolbar>
+    <mat-nav-list >
+      <li class="active"> <a href="profile.html"><i class="fa fa-home size"></i><span>Home</span></a>
+      </li>
+      <li> <a  href="#" ><i class="fa fa-graduation-cap size"></i><span>My Courses</span></a>
+      </li>
+      <li> <a href="#" ><i class="fa fa-bandcamp size"></i><span>Catalog</span></a>
+      </li>
+      <li> <a href="#"><i class="fa fa-envelope-o size"></i><span>Inbox</span></a>
+      </li>
+      <li id="bottomSide"> <a href="#"><i class="fa fa-gears size"></i><span>Settings</span></a>
+      </li>
+      <li> <a href="#"><i class="fa fa-power-off size"></i><span>Logout</span></a>
+      </li>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
