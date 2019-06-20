@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,10 +8,28 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FooterComponent } from './footer/footer.component';
-import {MatSidenavModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule, MatCardModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule, MatCheckboxModule, MatChipsModule,
+  MatDatepickerModule, MatDialogModule, MatGridListModule, MatIconModule,
+  MatInputModule, MatListModule,
+  MatMenuModule,
+  MatNativeDateModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule,
+  MatSidenavModule, MatSlideToggleModule, MatSnackBarModule, MatStepperModule, MatTabsModule, MatToolbarModule
+} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { LayoutModule } from '@angular/cdk/layout';
+import {MatFormFieldModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {MAT_MOMENT_DATE_ADAPTER_OPTIONS, MatMomentDateModule} from '@angular/material-moment-adapter';
+import {LayoutModule} from '@angular/cdk/layout';
+import {FileDropModule} from 'ngx-file-drop';
+import {BarRatingModule} from 'ngx-bar-rating';
+import {StarRatingModule} from 'angular-star-rating';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {LoginComponent} from './login/login.component';
+import {RegisterComponent} from './register/register.component';
+import { FullIntroComponent } from './full-intro/full-intro.component';
 
 @NgModule({
   declarations: [
@@ -21,21 +39,52 @@ import { LayoutModule } from '@angular/cdk/layout';
     IntroductionComponent,
     CoursesComponent,
     FooterComponent,
-    SidenavComponent
+    LoginComponent,
+    RegisterComponent,
+    FullIntroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatSidenavModule,
+    MatInputModule,
+    MatFormFieldModule,
     BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
+    MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatIconModule,
+    HttpClientModule,
+    MatMomentDateModule,
+    MatSnackBarModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatProgressSpinnerModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatSlideToggleModule,
+    MatStepperModule,
+    LayoutModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatSidenavModule,
     MatListModule,
-    MatCardModule
+    FileDropModule,
+    NgbModule,
+    StarRatingModule.forRoot(),
+    BarRatingModule,
+    MatCardModule,
+    MatChipsModule,
+    MatRadioModule,
+    MatDialogModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{ provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true }  }, {
+    provide: HAMMER_GESTURE_CONFIG,
+    useClass: HammerGestureConfig
+  }
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [LoginComponent, RegisterComponent]
 })
 export class AppModule { }
