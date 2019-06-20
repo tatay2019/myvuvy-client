@@ -1,0 +1,40 @@
+<h3>Register</h3>
+
+<div class="container-fluid">
+
+
+  <mat-form-field style="width: 100%" class="col-12">
+    <input type="text" style="width: 100%" matInput placeholder="username"  name="username" [(ngModel)]="user.username">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%" class="col-6">
+    <input type="text" style="width: 100%" matInput placeholder="Firstname" name="name" [(ngModel)]="user.name">
+  </mat-form-field>
+  <mat-form-field style="width: 100%" class="col-6">
+    <input type="text" style="width: 100%" matInput placeholder="Lastname" name="lastname" [(ngModel)]="user.lastname">
+  </mat-form-field>
+  <mat-form-field style="width: 100%" class="col-6">
+    <input type="text" style="width: 100%" matInput placeholder="email" name="email" [(ngModel)]="user.email">
+  </mat-form-field>
+  <mat-form-field style="width: 100%"class="col-6">
+    <input type="text" style="width: 100%" matInput placeholder="tel" name="tel" [(ngModel)]="user.tel">
+  </mat-form-field>
+
+
+  <mat-form-field style="width: 100%" class="col-6">
+    <input type="password"  matInput placeholder="password"  name="password" [(ngModel)]="user.password">
+  </mat-form-field>
+  <mat-form-field style="width: 100%" class="col-6">
+    <input type="password"  matInput placeholder="password" class="col-6">
+  </mat-form-field>
+
+  <mat-form-field style="width: 100%;" class="col-12">
+    <input matInput [matDatepicker]="picker" placeholder="birth date" name="" [(ngModel)]="user.birthdate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-checkbox color="primary" class="col-12" name="formateur" [(ngModel)]="user.formateur">
+    check me ! if you are a formative
+  </mat-checkbox>
+  <button mat-flat-button color="primary" (click)="create()" style="width: 100%"> Sign up </button>
+</div>
