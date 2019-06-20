@@ -5,22 +5,22 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar><span id="firstPart">MyV</span><span id="secondPart">uVy</span></mat-toolbar>
     <mat-nav-list >
-      <li class="active"> <a routerLink="/dashboard"><i class="fa fa-home size"></i><span>Home</span></a>
+      <li class="active"> <a href="profile.html"><i class="fa fa-home size"></i><span>Home</span></a>
       </li>
       <li> <a  routerLink="/dashboard/my"><i class="fa fa-graduation-cap size"></i><span>My Courses</span></a>
       </li>
-      <li> <a routerLink="/dashboard/catalog" ><i class="fa fa-safari size"></i><span>Catalog</span></a>
+      <li> <a routerLink="/dashboard/catalog" ><i class="fa fa-map size"></i><span>Catalog</span></a>
       </li>
-      <li> <a ><i class="fa fa-facebook-messenger size"></i><span>Inbox</span></a>
+      <li> <a ><i class="fa fa-envelope-square size"></i><span>Inbox</span></a>
       </li>
-      <li> <a routerLink="/dashboard/upload"><i class="fa fa-facebook-messenger size"></i><span>Upload Video</span></a>
+      <li> <a routerLink="/dashboard/upload"><i class="fa fa-arrow-circle-up size"></i><span>Upload Video</span></a>
       </li>
-      <li> <a routerLink="/dashboard/uploaded"><i class="fa fa-facebook-messenger size"></i><span>Uploaded Video</span></a>
+      <li> <a routerLink="/dashboard/uploaded"><i class="fa fa-database size"></i><span>Uploaded Video</span></a>
       </li>
       <div id="bottomSide">
       <li> <a href="#"><i class="fa fa-cog size"></i><span>Settings</span></a>
       </li>
-      <li> <a (click)="logout()"><i class="fa fa-power-off size" ></i><span>Logout</span></a>
+      <li> <a href="#"><i class="fa fa-power-off size"></i><span>Logout</span></a>
       </li>
       </div>
     </mat-nav-list>
@@ -36,12 +36,23 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <div class="userBlocName">
-        <img [src]="user.photoUrl" alt="Avatar" class="avatar">
-        <span id="userNameAccount">  {{user.name + ' ' + user.lastname}}</span>
+        <img src="/assets/images/java.jpg" alt="Avatar" class="avatar">
+        <span id="userNameAccount">  Java Account</span>
       </div>
     </mat-toolbar>
 
-    <router-outlet>  </router-outlet>
+    <div class="body-content">
+      <mat-card>
+        <mat-card-content>
+          <h1 class="courseTitle">Name of Course</h1>
+          <img src="/assets/images/java.jpg" class="courseImage">
+          <span class="courseSubtitle">Description</span>
+          <p>Lorem ipsum dolor sit amet, vis ex sint epicuri, mel commodo oporteat constituto te. Sonet timeam id his</p>
+          <span>Videos</span>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
 
   </mat-sidenav-content>
 </mat-sidenav-container>

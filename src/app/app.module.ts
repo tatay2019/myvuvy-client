@@ -11,7 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import {
   MatButtonModule,
   MatCardModule, MatCheckboxModule, MatChipsModule,
-  MatDatepickerModule, MatDialogModule, MatGridListModule, MatIconModule,
+  MatDatepickerModule, MatDialogModule, MatExpansionModule, MatGridListModule, MatIconModule,
   MatInputModule, MatListModule,
   MatMenuModule,
   MatNativeDateModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule,
@@ -31,8 +31,10 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { FullIntroComponent } from './full-intro/full-intro.component';
 import {SidenavComponent} from './sidenav/sidenav.component';
-import {AddCourseComponent} from './add-course/add-course.component';
-import {CatalogComponent} from './catalog/catalog.component';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import {MyVideosComponent} from './my-videos/my-videos.component';
+import {AddVideoComponent} from './add-video/add-video.component';
 
 @NgModule({
   declarations: [
@@ -47,8 +49,9 @@ import {CatalogComponent} from './catalog/catalog.component';
     FullIntroComponent,
     SidenavComponent,
     AddCourseComponent,
-    CatalogComponent
-
+    CatalogComponent,
+    MyVideosComponent,
+    AddVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +87,8 @@ import {CatalogComponent} from './catalog/catalog.component';
     MatCardModule,
     MatChipsModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
+    MatExpansionModule
   ],
   providers: [{ provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true }  }, {
     provide: HAMMER_GESTURE_CONFIG,
