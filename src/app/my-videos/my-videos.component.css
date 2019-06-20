@@ -1,0 +1,40 @@
+.body-content
+{
+  width: 60%;
+  transform: translateY(15px) translateX(33%);
+}
+.courseTitle
+{
+  text-align: center;
+  font-family: "Comic Sans MS", sans-serif;
+}
+.courseImage
+{
+  width: 100%;
+  height: 450px;
+  padding-bottom: 30px;
+}
+.courseSubtitle{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", sans-serif;
+}
+#descr
+{
+  padding-top: 5px;
+}
+.primaryButton
+{
+  transform: translateX(5%) translateY(5px);
+  width: 90%;
+  background:#0a3d62;
+}
+.courseVideo
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.courseVideoPlay
+{
+  width: 100%;
+}

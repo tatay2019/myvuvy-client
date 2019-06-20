@@ -1,0 +1,6 @@
+.primaryButton
+{
+  transform: translateX(5%) translateY(5px);
+  width: 90%;
+  background:#0a3d62;
+}
