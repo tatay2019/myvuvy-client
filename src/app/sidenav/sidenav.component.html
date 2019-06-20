@@ -16,7 +16,7 @@
       <div id="bottomSide">
       <li> <a href="#"><i class="fa fa-cog size"></i><span>Settings</span></a>
       </li>
-      <li> <a href="#"><i class="fa fa-power-off size"></i><span>Logout</span></a>
+      <li> <a (click)="logout()"><i class="fa fa-power-off size" ></i><span>Logout</span></a>
       </li>
       </div>
     </mat-nav-list>
@@ -32,8 +32,8 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <div class="userBlocName">
-        <img src="/assets/images/java.jpg" alt="Avatar" class="avatar">
-        <span id="userNameAccount">  Java Account</span>
+        <img [src]="user.photoUrl" alt="Avatar" class="avatar">
+        <span id="userNameAccount">  {{user.name + ' ' + user.lastname}}</span>
       </div>
     </mat-toolbar>
     <router-outlet></router-outlet>

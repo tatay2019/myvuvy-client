@@ -29,6 +29,12 @@ export class UserService {
   }
   // login
   login(body) {
-    return this.http.post(this.url + '/login', body);
+    return this.http.post(this.url + '/auth/login', body);
   }
+  public uploadImage(file: File) {
+    const fd =  new FormData();
+    fd.append('file', file);
+    return this.http.post('http://localhost:8080/uploadFile', fd);
+  }
+
 }

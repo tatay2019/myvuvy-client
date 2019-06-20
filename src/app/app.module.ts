@@ -30,6 +30,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { FullIntroComponent } from './full-intro/full-intro.component';
+import {SidenavComponent} from './sidenav/sidenav.component';
+import { AllCoursesComponent } from './all-courses/all-courses.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { FullIntroComponent } from './full-intro/full-intro.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    FullIntroComponent
+    FullIntroComponent,
+    SidenavComponent,
+    AllCoursesComponent
   ],
   imports: [
     BrowserModule,
