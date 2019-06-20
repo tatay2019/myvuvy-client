@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class ResourcesService {
 
-  url = environment.api + 'users';
+  url = environment.api + 'resources';
   constructor(private http: HttpClient) { }
 
   create(body): Observable<any> {
@@ -32,9 +32,4 @@ export class UserService {
     fd.append('file', file);
     return this.http.post('http://localhost:8080/uploadFile', fd);
   }
-  // login
-  login(body) {
-    return this.http.post(this.url + '/auth/login', body);
-  }
-
 }

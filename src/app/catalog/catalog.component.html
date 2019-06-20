@@ -1,0 +1,34 @@
+<h1 *ngIf="my">My Courses</h1>
+<h1 *ngIf="uploaded">My uploaded Courses</h1>
+<h1 *ngIf="!uploaded && !my">All courses</h1>
+<div class="col-12">
+  <mat-form-field appearance="legacy" class="col-6 sizeFix">
+    <mat-label>Search</mat-label>
+    <input matInput>
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <mat-form-field class="col-6 sizeFix" >
+    <mat-label>Category</mat-label>
+    <mat-select>
+      <mat-option></mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let cour of courses">
+      <div class="card">
+        <div>
+          <img class="card-img-top" src="{{cour.image}}">
+          <div class="card-body">
+            <h4 class="card-title">{{cour.name}}</h4>
+            <h5>publisher :  {{cour.publisher.name}}</h5>
+            <p>{{cour.description}}</p>
+            <a href="#" class="btn btn-outline-secondary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

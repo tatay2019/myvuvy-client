@@ -4,6 +4,8 @@ import {FullIntroComponent} from './full-intro/full-intro.component';
 import {SidenavComponent} from './sidenav/sidenav.component';
 import {AuthGuard} from './auth.guard';
 import {CoursesComponent} from './courses/courses.component';
+import {CatalogComponent} from './catalog/catalog.component';
+import {AddCourseComponent} from './add-course/add-course.component';
 
 const routes: Routes = [{
   path: '',
@@ -15,6 +17,21 @@ const routes: Routes = [{
   children: [{
     path: '',
     component: CoursesComponent
+  }, {
+    path: 'catalog',
+    component: CatalogComponent
+  }, {
+    path: 'my',
+    component: CatalogComponent
+  }, {
+    path: 'uploaded',
+    component: CatalogComponent
+  }, {
+    path: 'upload',
+    component: AddCourseComponent
+  }, {
+    path: 'cours/:id',
+    component: CatalogComponent
   }]
 }];
 

@@ -97,3 +97,20 @@ mat-nav-list > li.active > a {
 {
   padding: 0px 20px 0 5px;
 }
+.body-content
+{
+  width: 50%;
+  transform: translateY(10%) translateX(45%);
+}
+.courseTitle
+{
+  text-align: center;
+}
+.courseImage
+{
+  width: 100%;
+  height: 100%;
+}
+.courseSubtitle{
+  font-size: 18px;
+}

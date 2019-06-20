@@ -5,13 +5,17 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar><span id="firstPart">MyV</span><span id="secondPart">uVy</span></mat-toolbar>
     <mat-nav-list >
-      <li class="active"> <a href="profile.html"><i class="fa fa-home size"></i><span>Home</span></a>
+      <li class="active"> <a routerLink="/dashboard"><i class="fa fa-home size"></i><span>Home</span></a>
       </li>
-      <li> <a  href="#" ><i class="fa fa-graduation-cap size"></i><span>My Courses</span></a>
+      <li> <a  routerLink="/dashboard/my"><i class="fa fa-graduation-cap size"></i><span>My Courses</span></a>
       </li>
-      <li> <a href="#" ><i class="fa fa-safari size"></i><span>Catalog</span></a>
+      <li> <a routerLink="/dashboard/catalog" ><i class="fa fa-safari size"></i><span>Catalog</span></a>
       </li>
-      <li> <a href="#"><i class="fa fa-facebook-messenger size"></i><span>Inbox</span></a>
+      <li> <a ><i class="fa fa-facebook-messenger size"></i><span>Inbox</span></a>
+      </li>
+      <li> <a routerLink="/dashboard/upload"><i class="fa fa-facebook-messenger size"></i><span>Upload Video</span></a>
+      </li>
+      <li> <a routerLink="/dashboard/uploaded"><i class="fa fa-facebook-messenger size"></i><span>Uploaded Video</span></a>
       </li>
       <div id="bottomSide">
       <li> <a href="#"><i class="fa fa-cog size"></i><span>Settings</span></a>
@@ -36,6 +40,8 @@
         <span id="userNameAccount">  {{user.name + ' ' + user.lastname}}</span>
       </div>
     </mat-toolbar>
-    <router-outlet></router-outlet>
+
+    <router-outlet>  </router-outlet>
+
   </mat-sidenav-content>
 </mat-sidenav-container>

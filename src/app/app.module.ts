@@ -31,7 +31,8 @@ import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { FullIntroComponent } from './full-intro/full-intro.component';
 import {SidenavComponent} from './sidenav/sidenav.component';
-import { AllCoursesComponent } from './all-courses/all-courses.component';
+import {AddCourseComponent} from './add-course/add-course.component';
+import {CatalogComponent} from './catalog/catalog.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { AllCoursesComponent } from './all-courses/all-courses.component';
     RegisterComponent,
     FullIntroComponent,
     SidenavComponent,
-    AllCoursesComponent
+    AddCourseComponent,
+    CatalogComponent
+
   ],
   imports: [
     BrowserModule,

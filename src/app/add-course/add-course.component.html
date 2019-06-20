@@ -1,0 +1,48 @@
+<div class="body-content">
+  <mat-card >
+    <mat-card-header>
+      <mat-card-title>Add your course</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="d-flex justify-content-center">
+        <div style="height: 150px;   background-color: #F0F0F0; display: flex; flex-direction: column; justify-content: flex-end; text-align: right">
+          <mat-spinner color="primary"  [diameter]="150" *ngIf="loader"></mat-spinner>
+
+          <img *ngIf="file != null && !loader" [src]="file" style="height: 100%; width: 100%; border-radius: 50%;" alt="">
+          <div style="width: 96%; height: 0;">
+            <input type="file" hidden  accept="image/*" (change)="onFileChange($event.target.files)" name="file" style="margin-top: 30px; font-weight: normal;" #fileInput>
+            <button mat-icon-button color="primary" (click)="fileInput.click(); " style=" margin-top: -35px; background-color: #F0F0F0; margin-left: -55px; position: absolute"><mat-icon >camera_alt</mat-icon></button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <mat-form-field style="width: 100%" class="col-6">
+        <input type="text" style="width: 100%" matInput placeholder="Title" [(ngModel)]="cours.name">
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%" class="col-6">
+        <mat-label>Category</mat-label>
+        <mat-select [(ngModel)]="cours.category">
+          <mat-option *ngFor="let cat of categories" [value]="cat" >{{cat.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%" class="col-6">
+        <input type="text" style="width: 100%" matInput placeholder="Price" [(ngModel)]="cours.price">
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%" class="col-6">
+        <input type="text" style="width: 100%" matInput placeholder="Duration" [(ngModel)]="cours.duration">
+      </mat-form-field>
+
+      <mat-form-field style="width: 100%">
+        <textarea matInput placeholder="Description" [(ngModel)]="cours.description"></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="primaryButton" (click)="add()">Save</button>
+
+    </mat-card-content>
+  </mat-card>
+</div>
