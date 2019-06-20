@@ -1,0 +1,12 @@
+.body-content
+{
+  width: 50%;
+
+  transform: translateY(30%) translateX(45%);
+}
+.primaryButton
+{
+  transform: translateX(5%) translateY(5px);
+  width: 90%;
+  background:#0a3d62;
+}
