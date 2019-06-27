@@ -4,6 +4,8 @@ import {CategoriesService} from '../services/categories.service';
 import {UserService} from '../services/user.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Cours} from '../models/Cours';
+import {User} from '../models/User';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-catalog',
@@ -15,10 +17,18 @@ export class CatalogComponent implements OnInit {
   my = false;
   uploaded = false;
   courses: [Cours];
-  constructor(private coursService: CoursService, private categService: CategoriesService, private userService: UserService, private actr: ActivatedRoute, private router: Router) {
+  user: User;
+  constructor(private coursService: CoursService, private categService: CategoriesService,
+              private userService: UserService, private actr: ActivatedRoute, private router: Router, private snack: MatSnackBar) {
     this.my = router.url.indexOf('/my') > -1;
     this.uploaded = router.url.indexOf('/uploaded') > -1;
 
+  }
+
+  enroll(cours) {
+    this.user = JSON.parse(localStorage.user);
+    this.user.submitedCourses = [cours];
+    this.userService.update(this.user).subscribe(r => this.snack.open('done', 'close', {duration: 1000}) );
   }
 
   ngOnInit() {

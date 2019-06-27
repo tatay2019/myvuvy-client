@@ -8,7 +8,7 @@
         <div style="height: 150px;   background-color: #F0F0F0; display: flex; flex-direction: column; justify-content: flex-end; text-align: right">
           <mat-spinner color="primary"  [diameter]="150" *ngIf="loader"></mat-spinner>
 
-          <img *ngIf="file != null && !loader" [src]="file" style="height: 100%; width: 100%; border-radius: 50%;" alt="">
+          <img *ngIf="file != null && !loader" [src]="file" style="height: 100%; width: 100%; " alt="">
           <div style="width: 96%; height: 0;">
             <input type="file" hidden  accept="image/*" (change)="onFileChange($event.target.files)" name="file" style="margin-top: 30px; font-weight: normal;" #fileInput>
             <button mat-icon-button color="primary" (click)="fileInput.click(); " style=" margin-top: -35px; background-color: #F0F0F0; margin-left: -55px; position: absolute"><mat-icon >camera_alt</mat-icon></button>

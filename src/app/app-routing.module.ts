@@ -6,6 +6,7 @@ import {AuthGuard} from './auth.guard';
 import {CoursesComponent} from './courses/courses.component';
 import {CatalogComponent} from './catalog/catalog.component';
 import {AddCourseComponent} from './add-course/add-course.component';
+import {MyVideosComponent} from './my-videos/my-videos.component';
 
 const routes: Routes = [{
   path: '',
@@ -31,7 +32,7 @@ const routes: Routes = [{
     component: AddCourseComponent
   }, {
     path: 'cours/:id',
-    component: CatalogComponent
+    component: MyVideosComponent
   }]
 }];
 

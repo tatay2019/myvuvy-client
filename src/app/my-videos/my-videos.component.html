@@ -1,30 +1,30 @@
 <div class="body-content">
   <mat-card>
     <mat-card-content>
-      <h1 class="courseTitle">Name of Course</h1>
-      <img src="/assets/images/java.jpg" class="courseImage">
+      <h1 class="courseTitle">{{cours.name}}e</h1>
+      <img src="{{cours.image}}" class="courseImage">
       <span class="courseSubtitle">Description</span>
-      <p id="descr">Lorem ipsum dolor sit amet, vis ex sint epicuri, mel commodo oporteat constituto te. Sonet timeam id his
-        Lorem ipsum dolor sit amet, vis ex sint epicuri, mel commodo oporteat constituto te. Sonet timeam id his
-        Lorem ipsum dolor sit amet, vis ex sint epicuri, mel commodo oporteat constituto te. Sonet timeam id his</p>
+      <p id="descr">{{cours.description}}</p>
       <span class="courseSubtitle">Videos</span>
-      <div class="courseVideo">
+      <div class="courseVideo" *ngFor="let res of cours.resources">
         <mat-accordion>
           <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title>
-                Video name
+                {{res.title}}
               </mat-panel-title>
               <mat-panel-description>
-                Video description
+                {{res.description}}
               </mat-panel-description>
             </mat-expansion-panel-header>
             <!--hne Video-->
-            <video class="courseVideoPlay"></video>
+            <video class="courseVideoPlay" controls >
+              <source [src]="res.url" type="video/mp4">
+            </video>
           </mat-expansion-panel>
         </mat-accordion>
       </div>
-      <button mat-raised-button color="primary" class="primaryButton">Add video</button>
+      <button   mat-raised-button color="primary" class="primaryButton" *ngIf="isTheFormatter" (click)="openDialog()">Add video</button>
     </mat-card-content>
 
   </mat-card>

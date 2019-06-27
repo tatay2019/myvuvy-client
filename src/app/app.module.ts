@@ -96,6 +96,6 @@ import {AddVideoComponent} from './add-video/add-video.component';
   }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [LoginComponent, RegisterComponent]
+  entryComponents: [LoginComponent, RegisterComponent, AddVideoComponent]
 })
 export class AppModule { }

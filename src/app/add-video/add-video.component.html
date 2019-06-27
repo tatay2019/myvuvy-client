@@ -1,16 +1,17 @@
 <div class="row">
   <mat-form-field class="col-6">
-    <input type="text" style="width: 100%" matInput placeholder="Title">
+    <input type="text" style="width: 100%" matInput placeholder="Title" [(ngModel)]="resource.title">
   </mat-form-field>
   <div class="col-6">
     <button type="button" mat-raised-button (click)="fileInput.click()" style="width: 99%; margin-top: 10px">Choose a file</button>
-    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+    <input hidden (change)="onFileChange($event.target.files)" #fileInput type="file" id="file">
+    <span *ngIf="!loader">done</span>
   </div>
 </div>
 
 <mat-form-field style="width: 100%">
-  <textarea matInput placeholder="Description"></textarea>
+  <textarea matInput placeholder="Description" [(ngModel)]="resource.description"></textarea>
 </mat-form-field>
 
 
-<button mat-flat-button color="primary" class="primaryButton">Submit</button>
+<button mat-flat-button color="primary" class="primaryButton" (click)="add()">Submit</button>

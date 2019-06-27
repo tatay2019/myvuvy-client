@@ -1,3 +1,4 @@
+import {Cours} from './Cours';
 
 export class User {
   public id?: number;
@@ -10,5 +11,6 @@ export class User {
   public formateur?: boolean;
   public birthdate?: Date;
   public tel: string;
+  public submitedCourses: [Cours];
 
 }
